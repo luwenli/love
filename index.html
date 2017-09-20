@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        header>img{
+            float: left;
+            margin-left: 170px;
+            height: 120px;
+        }
+
+        section>img{
+            width: 100%;
+        }
+        header{
+            width: 100%;
+            height: 120px;
+            background-color: rgba(0,0,0,0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        nav>ul>li{
+            float: left;
+            color: white;
+            font-size: 18px;
+            line-height: 120px;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        nav>ul>li:hover{
+            color: #089efd;
+        }
+        header>button{
+            height: 50px;
+            font-size: 18px;
+            border-radius: 20px;
+            margin-left: 5px;
+            margin-top: 40px;
+        }
+       header> button:first-of-type{
+            width: 100px;
+            height: 40px;
+            color:rgb(213,193,98);
+            background-color: transparent;
+            border: 1px solid yellow;
+            margin-left: 50px;
+        }
+        header>button:last-of-type{
+            width: 150px;
+            height: 40px;
+            color:rgb(213,193,98);
+            background-color: transparent;
+            border: 1px solid yellow;
+        }
+        header>button:hover{
+            background-color: rgb(213,193,98);
+            color: yellow;
+        }
+       footer{
+           margin-top: -4px;
+           width: 100%;
+           height: 250px;
+           background-color: rgba(0,0,0,0.5);
+           position: relative;
+       }
+        footer>ul>li>span:first-of-type{
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: url("sprites_footer.png")no-repeat;
+        }
+        footer>ul{
+            margin-left: 370px;
+        }
+        footer >ul>li{
+            float: left;
+            margin-top: 50px;
+        }
+        footer>ul>li>span:last-of-type:hover{
+            color: blue;
+            cursor: pointer;
+        }
+        footer >p{
+            font-size: 18px;
+            position: absolute;
+            top: 223px;
+            left: 566px;
+            color: #b3b3b3;
+        }
+        .tyer{
+            width: 100%;
+            height: 820px;
+            background: url("img/bg_2.jpg");
+            position: relative;
+            transform:translateY(-4px);
+        }
+        .qq{
+            width: 120px;
+            height: 120px;
+            transform:translateX(342px)translateY(209px);
+            background: url("img/sprites_index.png") no-repeat -683px -447px;
+            animation: qq 1s;
+        }
+        @keyframes qq {
+            0%{
+               transform: rotate(-180deg);
+               position: absolute;
+                top: 210px;
+                left: 280px;
+                display: none;
+            }
+            100%{
+                transform: rotate(0deg);
+                position: absolute;
+                top: 210px;
+                left: 342px;
+                display: block;
+            }
+        }
+        .gongneng{
+            width: 360px;
+            height: 230px;
+            position: absolute;
+            top:140px;
+            left:466px ;
+            background: url("img/sprites_index.png") no-repeat 8px -210px;
+            animation: gongneng 2s;
+        }
+        @keyframes gongneng {
+            0%{
+                opacity: 0;
+                display: none;
+                top: 560px;
+            }
+            100%{
+                display: block;
+                top:140px;
+            }
+        }
+        .i1{
+            width: 800px;
+            position: absolute;
+            top: 90px;
+            left: 450px;
+        }
+
+
+
+        .tusan{
+            width: 100%;
+            height: 820px;
+            background: url("img/bg_3.jpg");
+            position: relative;
+            transform:translateY(-4px);
+        }
+        .shubiao{
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            top: 150px;
+            left: 342px;
+            background: url("img/sprites_index.png") no-repeat -683px -561px;
+            animation: shubiao 2s;
+        }
+        @keyframes shubiao {
+            0%{
+                transform: rotate(-180deg);
+                position: absolute;
+                top: 210px;
+                left: 280px;
+                display: none;
+            }
+            100%{
+                transform: rotate(0deg);
+                position: absolute;
+                top:130px;
+                left: 342px;
+                display: block;
+            }
+        }
+        .youxi{
+            width: 360px;
+            height: 190px;
+            position: absolute;
+            top:135px;
+            left: 466px;
+            background: url("img/sprites_index.png") no-repeat 8px -433px;
+            animation: youxi 2s;
+        }
+        @keyframes youxi {
+            0%{
+                opacity: 0;
+                display: none;
+                top: 560px;
+            }
+            100%{
+                display: block;
+                top:135px;
+            }
+        }
+
+        .i2{
+            position: absolute;
+            top:60px;
+            left: 250px;
+        }
+        .diannao{
+            width: 300px;
+            height: 250px;
+            background: url("img/sprites_game_feature.png");
+            position: absolute;
+            bottom: 45px;
+            right:517px;
+            transform: scale(0.8);
+            z-index: 99;
+            animation: diannao 2s ;
+        }
+
+        @keyframes diannao {
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .huohua{
+            width: 400px;
+            height: 280px;
+            background: url("img/sprites_game_feature2.png")0 -440px;
+            position: absolute;
+            bottom: 75px;
+            right:430px;
+            transform: scale(0.7);
+            animation:huohua 3s;
+        }
+        @keyframes huohua {
+            0%{
+                opacity: 0;
+            }
+            70%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .kupao{
+            width: 300px;
+            height: 250px;
+            background: url("img/sprites_game_feature.png")no-repeat -420px 0;
+            position: absolute;
+            bottom: 15px;
+            right:316px;
+            transform: scale(0.7);
+            z-index: 2 ;
+            animation:huohua 5.5s ;
+        }
+        @keyframes kupao {
+            0%{
+                opacity: 0;
+            }
+            70%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .gangtie{
+            width: 300px;
+            height: 250px;
+            background: url("img/sprites_game_feature.png")no-repeat 0 -350px;
+            position: absolute;
+            bottom: 180px;
+            right:363px;
+            transition: all 1s;
+            transform: scale(0.7);
+            z-index: 2;
+            animation:gang 5s;
+        }
+        .gangtie:hover{
+            transform: scale(0.8);
+        }
+        @keyframes gang{
+            0%{
+                opacity: 0;
+            }
+            70%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .qiangshou{
+            width: 300px;
+            height: 250px;
+            background: url("img/sprites_game_feature.png")no-repeat -430px -250px;
+            position: absolute;
+            bottom: 180px;
+            right:410px;
+            transition: all 1s;
+            transform: scale(0.7);
+            animation:qiang 4.5s;
+        }
+        .qiangshou:hover{
+            transform: scale(0.8);
+        }
+        @keyframes qiang{
+            0%{
+                opacity: 0;
+            }
+            70%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        .meinv{
+            width: 200px;
+            height: 250px;
+            background: url("img/sprites_game_feature2.png")no-repeat -418px 34px;
+            position: absolute;
+            bottom: 180px;
+            right:563px;
+            transition: all 1s;
+            transform: scale(0.7);
+            animation:mei 4s ;
+        }
+        .meinv:hover{
+            transform: scale(0.8);
+        }
+        @keyframes mei{
+            0%{
+                opacity: 0;
+            }
+            70%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .tumeinv{
+            width: 200px;
+            height: 250px;
+            background: url("img/sprites_game_feature2.png")no-repeat -200px 0px;
+            position: absolute;
+            bottom: 139px;
+            right:636px;
+            transition: all 1s;
+            transform: scale(0.7);
+            animation:tu 3.5s;
+        }
+        .tumeinv:hover{
+            transform: scale(0.8);
+        }
+        @keyframes tu{
+            0%{
+                opacity: 0;
+            }
+            70%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .car{
+            width: 150px;
+            height: 80px;
+            background: url("img/sprites_game_feature2.png")no-repeat 0 0;
+            position: absolute;
+            bottom: 82px;
+            right:60px;
+            transition: all 1s;
+            transform: scale(0.7);
+            z-index: 9;
+            animation:car 2s 2.2s;
+        }
+        @keyframes car{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+            }
+
+        .boom{
+            width: 185px;
+            height: 145px;
+            background: url("img/sprites_game_feature2.png")no-repeat 0 -100px;
+            position: absolute;
+            bottom: 77px;
+            right:80px;
+            transition: all 1s;
+            transform: scale(0.7);
+            z-index: 7;
+            animation:bom 2s 2.5s;
+        }
+        @keyframes bom{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        .tusi{
+            width: 100%;
+            height: 820px;
+            background: url("img/bg_4.jpg");
+            position: relative;
+            transform:translateY(-4px);
+        }
+        .qianbi{
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            top: 209px;
+            left: 342px;
+            background: url("img/sprites_index.png") no-repeat -683px -681px;
+            animation: qianbi 1s;
+        }
+        @keyframes qianbi{
+            0%{
+                transform: rotate(-180deg);
+                position: absolute;
+                top: 210px;
+                left: 280px;
+                display: none;
+            }
+            100% {
+                transform: rotate(0deg);
+                position: absolute;
+                top: 210px;
+                left: 342px;
+                display: block;
+            }
+            }
+        .shenghuo{
+            width: 360px;
+            height: 190px;
+            position: absolute;
+            top: 200px;
+            left: 466px;
+            background: url("img/sprites_index.png") no-repeat 8px -607px;
+            animation: shenghuo 1s;
+        }
+        @keyframes shenghuo {
+            0%{
+                opacity: 0;
+                display: none;
+                top: 560px;
+            }
+            100%{
+                display: block;
+                top:200px;
+            }
+        }
+        .i3{
+            width: 900px;
+            position: absolute;
+            top: 135px;
+            left: 470px;
+        }
+        .tuwu{
+            width: 100%;
+            height: 820px;
+            background: url("img/bg_5.jpg");
+            position: relative;
+            transform:translateY(-4px);
+        }
+        .yifi{
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            top:80px;
+            left:340px;
+            background: url("img/sprites_index.png") no-repeat -683px -800px;
+            animation: yifu 1s;
+        }
+        @keyframes yifu{
+            0%{
+                transform: rotate(180deg);
+                position: absolute;
+                top:120px;
+                left:250px;
+                display: none;
+            }
+            100% {
+                transform: rotate(0deg);
+                position: absolute;
+                top:80px;
+                left:340px;
+                display: block;
+            }
+        }
+
+        .zhuangban{
+            width: 360px;
+            height: 190px;
+            position: absolute;
+            top: 69px;
+            left: 465px;
+            background: url("img/sprites_index.png") no-repeat 8px -797px;
+            animation: zhuangban 1s;
+        }
+        @keyframes zhuangban {
+            0%{
+                opacity: 0;
+                display: none;
+                top: 560px;
+            }
+            100%{
+                display: block;
+                top:100px;
+            }
+        }
+        .i4{
+            width: 600px;
+            position: absolute;
+            top: 1px;
+            left: 870px;
+        }
+        .qie{
+            width: 185px;
+            height: 161px;
+            background: url("img/sprites_makeup_feature.png")no-repeat 0 -100px;
+            position: absolute;
+            bottom: 125px;
+            right:43px;
+            transition: all 1s;
+            transform: scale(0.7);
+            animation: qie 2s;
+        }
+        @keyframes qie {
+            0%{
+                bottom: 115px;
+                right:10px;
+                opacity: 0.25;
+                transform: scale(0.6);
+
+            }
+            25%{
+                opacity: 0.5;
+                transform: scale(0.7);
+            }
+            50%{
+                opacity: 0.25;
+                transform: scale(0.6);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(0.7);
+            }
+        }
+        .qie:hover{
+            transform: scale(0.8);
+        }
+        .duck{
+            width: 150px;
+            height: 223px;
+            background: url("img/sprites_makeup_feature.png")no-repeat 0 100px;
+            position: absolute;
+            bottom: 445px;
+            right:131px;
+            transition: all 1s;
+            transform: scale(0.7);
+            animation: duck 2s;
+        }
+        @keyframes duck {
+            0%{
+                opacity: 0;
+                bottom: 355px;
+                right:131px;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+                bottom: 445px;
+                right:131px;
+            }
+        }
+        .duck:hover{
+            transform: scale(0.8);
+        }
+        .wenziyi{
+            width: 295px;
+            height: 142px;
+            background: url("img/sprites_makeup_feature.png")no-repeat 0 -733px;
+            position: absolute;
+            bottom: 240px;
+            right:1px;
+            transition: all 1s;
+            transform: scale(0.7);
+            animation: wenyi 2s;
+        }
+        @keyframes wenyi {
+            0%{
+                opacity: 0.25;
+                transform: scale(0.6);
+            }
+            25%{
+                opacity: 0.5;
+                transform: scale(0.7);
+            }
+            50%{
+                opacity: 0.25;
+                transform: scale(0.6);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(0.8);
+            }
+        }
+        .wenziyi:hover{
+            transform: scale(0.8);
+        }
+        .wenzier{
+            width: 295px;
+            height: 81px;
+            background: url("img/sprites_makeup_feature.png")no-repeat 0 -633px;
+            position: absolute;
+            bottom: 367px;
+            right:283px;
+            transition: all 1s;
+            transform: scale(0.7);
+            animation: wener 2s;
+        }
+        @keyframes wener {
+            0%{
+                opacity: 0.25;
+                transform: scale(0.6);
+            }
+            25%{
+                opacity: 0.5;
+                transform: scale(0.7);
+            }
+            50%{
+                opacity: 0.25;
+                transform: scale(0.6);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(0.7);
+            }
+        }
+
+        .wenzier:hover{
+            transform: scale(0.8);
+        }
+        .xiong{
+            width: 295px;
+            height: 185px;
+            background: url("img/sprites_makeup_feature.png")no-repeat 0 -415px;
+            position: absolute;
+            bottom: 169px;
+            right:389px;
+            transition: all 1s;
+            transform: scale(0.7);
+            z-index: 9;
+            animation: xiong 2s;
+        }
+        @keyframes xiong {
+            0%{
+                opacity: 0.25;
+                transform: scale(0.6);
+                bottom: 160px;
+                right:430px;
+            }
+            25%{
+                opacity: 0.5;
+                transform: scale(0.7);
+            }
+            50%{
+                opacity: 0.25;
+                transform: scale(0.6);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(0.7);
+            }
+        }
+
+        .xiong:hover{
+            transform: scale(0.8);
+        }
+        .haizi{
+            width: 250px;
+            height: 155px;
+            background: url("img/sprites_makeup_feature.png")no-repeat 0 -249px;
+            position: absolute;
+            bottom: 128px;
+            right:550px;
+            transition: all 1s;
+            transform: scale(0.7);
+            animation: haizi 2s;
+        }
+        @keyframes haizi {
+            0%{
+                bottom: 120px;
+                right:600px;
+                opacity: 0.25;
+                transform: scale(0.6);
+            }
+            25%{
+                opacity: 0.5;
+                transform: scale(0.7);
+            }
+            50%{
+                opacity: 0.25;
+                transform: scale(0.6);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(0.7);
+            }
+        }
+        .haizi:hover{
+            transform: scale(0.8);
+        }
+        .life>li{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            transition: al 1s;
+        }
+        .life>li:hover{
+            transform: scale(1.1);
+        }
+        .life>li:nth-of-type(1){
+            position: absolute;
+            top: 62px;
+            right:517px;
+            background: url("img/sprites_life_feature.png");
+            animation: l1 500ms linear ,li1 500ms 500ms infinite alternate ;
+        }
+        @keyframes l1 {
+            0%{
+               opacity: 0;
+                top: 300px;
+                right: 310px;
+            }
+            25%{
+                top: 280px;
+                opacity: 0.25;
+                right: 360px;
+            }
+            50%{
+                top: 240px;
+                opacity: 0.5;
+                right: 450px;
+            }
+            75%{
+                top: 120px;
+                opacity: 0.75;
+                right: 510px;
+            }
+            100%{
+               opacity: 1;
+                top: 60px;
+                right:520px;
+            }
+        }
+        @keyframes li1 {
+            0%{
+                top: 60px;
+                right:520px;
+            }
+            100%{
+                top: 58px;
+                right:525px;
+            }
+        }
+
+        .life>li:nth-of-type(2){
+            top: 9px;
+            right: 383px;
+            background: url("img/sprites_life_feature.png") 0 -150px;
+            animation: l2 500ms linear,li2 500ms 500ms infinite alternate ;
+        }
+        @keyframes l2 {
+            0%{
+                opacity: 0;
+                top: 300px;
+                right: 310px;
+            }
+            25%{
+                top: 280px;
+                opacity: 0.25;
+                right: 360px;
+            }100% {
+                 top: 9px;
+                 right: 383px;
+             }
+        }
+        @keyframes li2 {
+            0%{
+                top: 9px;
+                right: 383px;
+            }
+            100%{
+                top: 12px;
+                right:385px;
+            }
+        }
+        .life>li:nth-of-type(3){
+            top: 270px;
+            right: 580px;
+            background: url("img/sprites_life_feature.png") 0 -300px;
+            animation: l3 500ms linear,li3 500ms 500ms infinite alternate ;
+        }
+        @keyframes l3 {
+            0%{
+                opacity: 0;
+                top: 250px;
+                right: 280px;
+            }
+            50%{
+                top: 260px;
+                right: 300px;
+            }100% {
+                 top: 270px;
+                 right: 580px;
+             }
+        }
+        @keyframes li3 {
+            0%{
+                top: 268px;
+                right: 582px;
+            }
+            100%{
+                top: 270px;
+                right: 580px;
+            }
+        }
+        .life>li:nth-of-type(4){
+            top: 108px;
+            right: 143px;
+            background: url("img/sprites_life_feature.png") 0 -450px;
+            animation: l4 500ms linear ,li4 500ms 500ms infinite alternate ;
+        }
+        @keyframes l4 {
+            0%{
+                opacity: 0;
+                top: 250px;
+                right: 280px;
+            }
+            50%{
+                top: 260px;
+                right: 300px;
+            }100% {
+                 top: 108px;
+                 right: 143px;
+             }
+        }
+        @keyframes li4 {
+            0%{
+                top: 108px;
+                right: 143px;
+            }
+            100%{
+                top: 120px;
+                right: 145px;
+            }
+        }
+        .life>li:nth-of-type(5){
+            top: 260px;
+            right: 77px;
+            background: url("img/sprites_life_feature.png") 0 -600px;
+            animation: l5 500ms linear,li5 500ms 500ms infinite alternate ;
+        }
+        @keyframes l5 {
+            0%{
+                opacity: 0;
+                top: 250px;
+                right: 280px;
+            }
+            50%{
+                top: 260px;
+                right: 300px;
+            }100% {
+                 top: 260px;
+                 right: 77px;
+             }
+        }
+        @keyframes li5 {
+            0%{
+                top: 260px;
+                right: 77px;
+            }
+            100%{
+                top: 263px;
+                right: 79px;
+            }
+        }
+
+        .life>li:nth-of-type(6){
+            top: 423px;
+            right: 477px;
+            background: url("img/sprites_life_feature.png") 0 -750px;
+            animation: l6 500ms linear ,li6 500ms 500ms infinite alternate ;
+        }
+        @keyframes l6 {
+            0%{
+                opacity: 0;
+                top: 250px;
+                right: 280px;
+            }
+            50%{
+                top: 260px;
+                right: 300px;
+            }100% {
+                 top: 423px;
+                 right: 477px;
+             }
+        }
+        @keyframes li6 {
+            0%{
+                top: 423px;
+                right: 477px;
+            }
+            100%{
+                top: 425px;
+                right: 479px;
+            }
+        }
+        .life>li:nth-of-type(7){
+            top:484px;
+            right: 261px;
+            background: url("img/sprites_life_feature.png") 0 -900px;
+            animation: l7 500ms linear, li7 500ms 500ms infinite alternate ;
+        }
+        @keyframes l7 {
+            0%{
+                opacity: 0;
+                top: 250px;
+                right: 280px;
+            }
+            50%{
+                top: 260px;
+                right: 300px;
+            }100% {
+                 top:484px;
+                 right: 261px;
+             }
+        }
+        @keyframes li7 {
+            0%{
+                top:484px;
+                right: 261px;
+            }
+            100%{
+                top:486px;
+                right: 263px;
+            }
+        }
+
+        .life>li:nth-of-type(8){
+            top: 361px;
+            right: 73px;
+            background: url("img/sprites_life_feature.png") 0 -1050px;
+            animation: l8 500ms linear, li8 500ms 500ms infinite alternate ;
+        }
+        @keyframes l8 {
+            0%{
+                opacity: 0;
+                top: 250px;
+                right: 280px;
+            }
+            50%{
+                top: 260px;
+                right: 300px;
+            }100% {
+                 top: 361px;
+                 right: 73px;
+             }
+        }
+        @keyframes li8 {
+            0%{
+                top: 361px;
+                right: 73px;
+            }
+            100%{
+                top: 363px;
+                right: 75px;
+            }
+        }
+        .funct>li{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 200px;
+            right: 200px;
+            transition: all 1s;
+        }
+
+        .funct>li:nth-of-type(1){
+            top: 450px;
+            right: 430px;
+            transform:scale(0.8);
+            background: url("img/sprites_function_feature.png");
+            animation: f1 500ms linear;
+
+        }
+        @keyframes f1 {
+            0%{
+                transform:scale(0.8);
+                top: 450px;
+                right: 430px;
+            }
+            50%{
+                transform:scale(1);
+                top: 450px;
+                right: 260px;
+            }
+            100%{
+                transform:scale(0.9);
+                top: 360px;
+                right: 140px;
+            }
+        }
+        .funct>li:nth-of-type(2){
+            top: 450px;
+            right: 260px;
+            background: url("img/sprites_function_feature.png") 0 -110px;
+            animation: f2 500ms linear;
+        }
+        @keyframes f2 {
+            0%{
+                top: 450px;
+                right: 260px;
+                transform:scale(1);
+            }
+            50%{
+                top: 360px;
+                right: 140px;
+                transform:scale(0.9);
+            }
+            100%{
+                transform:scale(0.7);
+                top: 230px;
+                right: 180px;
+            }
+
+        }
+        .funct>li:nth-of-type(3){
+            top: 360px;
+            right: 140px;
+            transform:scale(0.9);
+            background: url("img/sprites_function_feature.png") 0 -220px;
+            animation: f3 500ms linear;
+        }
+        @keyframes f3 {
+            0%{
+                top: 360px;
+                right: 140px;
+                transform:scale(0.9);
+            }
+            50%{
+                transform:scale(0.7);
+                top: 230px;
+                right: 180px;
+            }
+            100%{
+                transform:scale(0.6);
+                top: 195px;
+                right:284px;
+            }
+        }
+        .funct>li:nth-of-type(4){
+            transform:scale(0.7);
+            top: 230px;
+            right: 180px;
+            background: url("img/sprites_function_feature.png") 0 -330px;
+            animation: f4 500ms linear;
+        }
+        @keyframes f4 {
+            0%{
+                transform:scale(0.7);
+                top: 230px;
+                right: 180px
+            }
+            50%{
+                transform:scale(0.6);
+                top: 195px;
+                right:284px;
+            }
+            100%{
+                transform:scale(0.5);
+                top: 245px;
+                right: 590px;
+            }
+        }
+        .funct>li:nth-of-type(5){
+            transform:scale(0.5);
+            top: 245px;
+            right: 590px;
+            background: url("img/sprites_function_feature.png") 0 -440px;
+            animation: f5 500ms linear;
+        }
+        @keyframes f5 {
+            0%{
+                transform:scale(0.5);
+                top: 245px;
+                right: 590px;
+            }
+            50%{
+                transform:scale(0.6);
+                top: 350px;
+                right: 660px;
+            }
+            100%{
+                transform:scale(0.7);
+                top: 420px;
+                right: 580px;
+            }
+        }
+        .funct>li:nth-of-type(6){
+            transform:scale(0.7);
+            top: 420px;
+            right: 580px;
+            background: url("img/sprites_function_feature.png") 0 -550px;
+            animation: f6 500ms linear;
+        }
+        @keyframes f6 {
+            0%{
+                transform:scale(0.7);
+                top: 420px;
+                right: 580px;
+            }50%{
+                 top: 450px;
+                 right: 430px;
+                 transform:scale(0.8);
+             }
+            100%{
+                top: 450px;
+                right: 260px;
+            }
+        }
+        .funct>li:nth-of-type(7){
+            transform:scale(0.6);
+            top: 195px;
+            right:284px;
+            background: url("img/sprites_function_feature.png") 0 -660px;
+            animation: f7 500ms linear;
+        }
+        @keyframes f7 {
+            0%{
+                transform:scale(0.6);
+                top: 195px;
+                right:284px;
+            }
+            50%{
+                transform:scale(0.5);
+                top: 245px;
+                right: 590px;
+            }
+            100%{
+                transform:scale(0.6);
+                top: 350px;
+                right: 660px;
+            }
+        }
+        .funct>li:nth-of-type(8){
+            transform:scale(0.6);
+            top: 350px;
+            right: 660px;
+            background: url("img/sprites_function_feature.png") 0 -770px;
+           animation: f8 500ms linear;
+        }
+        @keyframes f8 {
+            0%{
+                transform:scale(0.6);
+                top: 350px;
+                right: 660px;
+            }
+            50%{
+                transform:scale(0.7);
+                top: 420px;
+                right: 580px;
+            }
+            100%{
+                top: 450px;
+                right: 430px;
+                transform:scale(0.8);
+            }
+        }
+        .funct>li:hover{
+            transform:scale(1)
+        }
+        .tuyi{
+            width: 100%;
+            height: 820px;
+            background: url("img/bg_1.jpg");
+            position: relative;
+            transform:translateY(-4px);
+        }
+        .buzuo{
+            width: 800px;
+            height: 265px;
+            position: absolute;
+            top: 200px;
+            left: 215px;
+            background: url("img/sprites_index.png");
+            z-index: 9;
+            animation: ami1 1s ;
+            transition: all 2s;
+        }
+        @keyframes ami1 {
+            0%{
+                transform: scale(99);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .jiandaosou{
+            position: absolute;
+            top: 165px;
+            left: 160px;
+        }
+        .qqhuiyuan{
+            width: 430px;
+            height: 150px;
+            background: url("img/sprites_index.png")no-repeat -582px -265px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        section button:first-of-type{
+           position: absolute;
+            top: 110px;
+            left:-37px;
+            width: 165px;
+            height: 40px;
+            color:rgb(213,193,98);
+            background-color: transparent;
+            border: 1px solid yellow;
+            margin-left: 50px;
+            border-radius: 20px;
+        }
+        section button:last-of-type{
+            position: absolute;
+            top: 110px;
+            left:140px;
+            width: 165px;
+            height: 40px;
+            color:rgb(213,193,98);
+            background-color: transparent;
+            border: 1px solid yellow;
+            margin-left: 50px;
+            border-radius: 20px;
+        }
+        .yinhao{
+            width: 430px;
+            height: 300px;
+            position: absolute;
+            top: 430px;
+            left: 242px;
+            z-index: 99;
+            animation: ami2 1s;
+        }
+
+        @keyframes ami2 {
+            0%{
+                opacity: 0;
+                display: none;
+                top: 560px;
+                left: 242px;
+            }
+            100%{
+                display: block;
+                top: 430px;
+                left: 242px;
+            }
+        }
+        section button:hover{
+            background-color: rgb(213,193,98);
+            color: yellow;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<header>
+    <img src="logo.png" alt=""/>
+    <nav>
+        <ul>
+            <li>功能特权</li>
+            <li>游戏特权</li>
+            <li>生活特权</li>
+            <li>会员活动</li>
+            <li>成长体系</li>
+            <li>年费专区</li>
+            <li>超级会员</li>
+        </ul>
+    </nav>
+    <button>登录</button>
+    <button>开通超级会员</button>
+</header>
+<section>
+    <div class="tuyi">
+        <div class="buzuo"></div>
+        <div class="yinhao">
+            <div class="qqhuiyuan"></div>
+            <button>开通会员</button>
+            <button>开通超级会员</button>
+        </div>
+        <img class="jiandaosou" src="img/figure_1.png" alt=""/>
+
+   </div>
+    <div class="tyer">
+        <div class="qq"></div>
+        <div class="gongneng"></div>
+        <img class="i1" src="img/figure_2.png" alt=""/>
+        <ul class="funct">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="tusan">
+        <div class="shubiao"></div>
+        <div class="youxi"></div>
+        <img class="i2" src="img/figure_3.png" alt=""/>
+        <div class="diannao"></div>
+        <div class="kupao"></div>
+        <div class="gangtie"></div>
+        <div class="qiangshou"></div>
+        <div class="meinv"></div>
+        <div class="tumeinv"></div>
+        <div class="car"></div>
+        <div class="boom"></div>
+        <div class="huohua"></div>
+    </div>
+
+    <div class="tusi">
+        <div class="qianbi"></div>
+        <div class="shenghuo"></div>
+        <img class="i3" src="img/figure_4.png" alt=""/>
+        <ul class="life">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="tuwu">
+        <div class="yifi"></div>
+        <div class="zhuangban"></div>
+        <img class="i4" src="img/figure_5.png" alt=""/>
+        <div class="qie"></div>
+        <div class="duck"></div>
+        <div class="wenziyi"></div>
+        <div class="wenzier"></div>
+        <div class="xiong"></div>
+        <div class="haizi"></div>
+    </div>
+
+</section>
+<footer>
+    <ul>
+        <li>
+            <span></span>
+            <span>官方手Q账号</span>
+        </li>
+        <li>
+            <span></span>
+            <span>官方微信账号</span>
+        </li>
+        <li>
+            <span></span>
+            <span>兑换中心</span>
+        </li>
+        <li>
+            <span></span>
+            <span>官方论坛</span>
+        </li>
+        <li>
+            <span></span>
+            <span>官方空间</span>
+        </li>
+        <li>
+            <span></span>
+            <span>官方微博</span>
+        </li>
+        <li>
+            <span></span>
+            <span>客服中心</span>
+        </li>
+    </ul>
+    <p>dgffhfdhfhfdgfddsgdgffhfhfghghfhshf</p> <br/>
+
+
+</footer>
+</body>
+<script src="../../JS/jquery.1.11.0.js"></script>
+<script>
+    $(function(){
+        for(var i=0;i<=7;i++){
+            $('footer>ul>li').eq(i).children('span:first').css({'background':'url("sprites_footer.png") no-repeat 0 '+ -100*i +'px','cursor':'pointer'});
+        }
+        var index=0;
+       $('footer>ul>li').hover(function(){
+           index=$(this).index();
+           $(this).children('span:first').css({'background':'url("sprites_footer.png")no-repeat -100px '+ -100*index+ 'px'})
+       },function(){
+           $(this).children('span:first').css({'background':'url("sprites_footer.png") no-repeat 0 '+ -100*index +'px'})
+       })
+    })
+</script>
+</html>
